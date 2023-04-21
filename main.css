@@ -1,0 +1,125 @@
+:root {
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+
+    --Dark_gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.125rem;
+    color: var(--Very_dark_desaturated_blue);
+
+    background-image: url(./Images/bg-pattern-top.svg), url(./Images/bg-pattern-bottom.svg);
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+    background-repeat: no-repeat, no-repeat;
+    background-color: hsl(185deg, 75%, 39%);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card {
+    background: white;
+    box-shadow: 0px 3px 14px -3px rgba(92, 92, 92, 0.75);
+    margin: 10rem 1rem 0;
+    border-radius: 1rem;
+    max-width: 27rem;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.background-card {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    margin-top: -57px;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+header h1 span {
+    color: var(--Dark_gray);
+    margin-left: .25rem;
+    font-weight: 400;
+}
+
+.city {
+    color: var(--Dark_gray);
+    margin-top: .8rem;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    margin: 2rem 1.1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(230, 228, 228);
+}
+
+.stat-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+}
+
+.stat-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.stat-text {
+    color: var(--Dark_gray);
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+}
+
+footer {
+    color: white;
+    font-size: .9rem;
+    margin: 4rem auto;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 0;
+    }
+}
